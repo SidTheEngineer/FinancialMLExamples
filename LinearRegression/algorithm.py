@@ -35,8 +35,8 @@ def create_regressor(x_vector, y_vector):
     return LinearRegression().fit(x_vector, y_vector)
 
 def generate_visuals(regressor, x_vector, y_vector):
-    plt.scatter(x_vector, y_vector, color='green', label= 'Actual Price') #plotting the initial datapoints
-    plt.plot(x_vector, regressor.predict(x_vector), color='red', linewidth=3, label = 'Predicted Price') #plotting the line made by linear regression
+    plt.scatter(x_vector, y_vector, color='green', label= 'Actual Price')
+    plt.plot(x_vector, regressor.predict(x_vector), color='red', linewidth=3, label = 'Predicted Price')
     plt.title('Linear Regression | Time vs. Price')
     plt.legend()
     plt.xlabel('Date Integer')
